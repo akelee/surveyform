@@ -1,1 +1,272 @@
-# surveryform
+<!doctype html>
+
+<html lang="en">
+
+<style>
+.overlay {  
+min-height:100%; background:url(https://wpaccuracy.com/wp-content/uploads/2020/06/web-developer.jpeg) rgb(153, 153, 230);
+  background-size:cover;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 400px;
+  color: white;
+  text-align: center;
+  
+}
+
+main {
+  
+  font-family: helvetica, arial;
+  color: white;
+  font-size: 1.125rem;
+ 
+}
+
+input::placeholder {
+  padding: 0.375rem;
+}
+
+body {
+  margin: auto;
+  opacity: 90%;
+  width: 50%;
+  text-align: center;
+}
+
+label {
+  color: white;
+  margin-bottom: 0.5rem;
+}  
+
+form {
+  background: #151551;
+  border-radius: 0.25rem;
+  padding: 2.5rem 3rem 2.5rem 3rem;
+  margin: 
+  width: 100%;
+  text-align: left;
+  }
+
+@media(min-width:480px;) {
+form {
+  padding:2.5rem;
+}
+  }
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.form-control {
+  border-radius: 0.25rem;
+  border: none;
+  width: 100%;
+  height: 2.375rem;
+  color: gray;
+  font-family: helvetica;
+  font-size: 16px;
+  
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color:#e4e4e4;
+}
+
+.form-group {
+  padding:0.25rem;
+  margin: 0 auto 1.25rem auto;
+}
+
+label {
+  
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+
+.textarea {
+  min-height: 120px;
+  width: 98%;
+  border-radius: 0.25rem;
+  font-size: 16px;
+   padding: 0.375rem;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  background: mediumseagreen;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  color: inherit;
+  font-family: helvetica, arial;
+  
+}
+.container {
+  width:100%;
+  margin: 3.125rem autp 0 auto;
+  
+}
+
+@media(min-width:576px) {.container {
+  max-width:540px;
+  }
+}
+
+@media(min-width:760px) {
+  .container {
+    max-width:720px;
+  }
+}
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</style>
+  
+  <div class="container">
+  <body background="https://wpaccuracy.com/wp-content/uploads/2020/06/web-developer.jpeg" class="overlay" id="overlay"></body>
+  <main>
+    <header>
+      
+<meta name="viewport" consent="width=device-width, initial-scale=1">
+        
+      <title>FCC: Survey Form </title>
+    <body>
+      
+
+    <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+      <p id="description" class="text-center"><em> Thank you for taking the time to help us improve the platform</em></p>
+      </header> 
+    
+      
+        
+      <form id="survey-form">
+        
+        <div class="form-group">
+           <label id="name-label" for="name">Name</label>
+   
+        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+      </div>
+     
+       <div class="form-group">  
+         <label id="email-label" for="email">Email</label>
+     
+        <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+      
+      </div>
+          
+    <div class="form-group">  
+      <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+      <input type="number" class="form-control" id="number" name="Age" min="10" max="99" placeholder="Age">
+      
+      </div>
+           
+   <div class="form-group"> 
+    Which option best describes your current role?<p>
+           <select id="dropdown" class="form-control" name="role" required>
+       <option disabled selected value>Select current role</option>
+       <option value="Student">Student</option>
+       <option value="job">Full-time job</option>
+       <option value="learner">Full-time learner</option>
+       <option value ="Prefer">Prefer not to say</option>
+       <option value="other">Other</option>
+   
+     </select> 
+        </div>
+    
+    <div class="form-group">
+    Would you recommend freeCodeCamp to a friend?<p>
+    <label>
+      <input type="radio" class="input-radio" name="recommend"value="Definitely" checked>Definitely</label><br>
+        
+      <label>
+      <input type="radio" value="maybe"class="input-radio" name="recommend">Maybe</label>
+      <br>
+      <label>
+      <input type="radio" value="Notsure"
+name="recommend" class="input-radio">Not sure</label>
+           </div>
+      <div class="form-group">
+      What is your favorite feature of freeCodeCamp?<p>
+      <select id="dropdown" class="form-control" name="feature" required>
+        <option disabled selected value="Select an option">Select an option</option>
+        <option value="Challenges">Challenges</option>
+        <option value="Projects">Projects</option>
+        <option value="Community">Community</option>
+        <option value="Open source">Open source</option>
+        </div>
+      </select>
+     <br>  
+      <div class="form-group">  
+        <p> <label id="improve-label" for="improve">What would you like to see improved?</label></p>
+        
+        <input type="checkbox"
+class="input-checkbox"        name="improve" value="Front-end projects" checked>
+        <label for="Front-end projects"> Front-end projects</label>
+        <br>
+      <input type="checkbox" name="improve" class="input-checkbox" value="Back-end Projects">
+        <label for="Back-end Projects">Back-end Projects</label>
+       <br>
+     
+        <input type="checkbox" name="improve" class="input-checkbox" value="Data Visualization">
+        <label for="Data Visualization">Data Visualization</label>
+        <br>
+      
+      <input type="checkbox" name="improve" class="input-checkbox" value="Challenges">
+        <label for="Challenges">Challenges</label>
+          <br>
+          
+       <input type="checkbox" name="improve" class="input-checkbox" value="Open Source Community">
+          
+          
+          <label for="Open Sourve Community">Open Source Community</label>
+          <br>
+        <input type="checkbox" class="input-checkbox" name="improve" value="Gitter help rooms">
+          <label for="Gitter help rooms">Gitter help rooms</label>
+          <br>
+        <input type="checkbox" name="improve" class="input-checkbox" value="Videos">
+          <label for="Videos">Videos</label>
+          <br>
+        <input type="checkbox" name="improve" class="input-checkbox" value="City Meetups">
+          <label for="City Meetups">City Meetups</label>
+          <br>
+        
+       <input type="checkbox" class="input-checkbox" name="improve" value="Wiki">
+        <label for="Wiki">Wiki</label>
+        <br>
+          
+        <input type="checkbox" name="improve" class="input-checkbox" value="Forum">
+          <label for="Forum">Forum</label>
+          <br>
+          
+        <input type="checkbox" name="improve" class="input-checkbox" value="Additional Courses">
+          <label for="Additional Courses">Additional Courses</label>
+          <br>
+        
+        <div class="form-group">
+         <p>Any comments or suggestions?</p>      
+        
+        <textarea id="comments" 
+type="comments" class="textarea"  name="comments" placeholder="Enter your comment here" required></textarea>
+        </div>
+       <br><br>
+        
+        <div class="form-group">
+        <button type="submit" id="submit" class="submit-button" form="survey-form" value="Submit">Submit</button>   
+        </div>
+    
+        
+             </div>
+        </form>
+    </body>
+</html>
